@@ -18,8 +18,8 @@ model = load_model()
 
 # Streamlit UI whether customer purchases a package or not
 st.title('Visit with Us: Customer Purchase Predictor')
-st.write('An internal application predicts whether the customer is likely to purchase a package or not based on customer details and interaction data.')
-st.write('Enter the customer details here.')
+st.subheader('An internal application predicts whether the customer is likely to purchase a package or not based on customer details and interaction data.')
+st.write('**Enter the customer details here.**')
 
 # Collect user input data
 # Customer details
@@ -39,7 +39,7 @@ Designation = st.selectbox("Customer's designation in their current organization
 MonthlyIncome = st.number_input('Gross monthly income of the customer', min_value=1000, max_value=100000, value=50000)
 
 # Customer interaction data
-st.write('Sales Interaction Summary.')
+st.write('**Sales Interaction Summary**')
 PitchSatisfactionScore = st.selectbox("Score indicating the customer's satisfaction with the sales pitch", [1, 2, 3, 4, 5])
 ProductPitched = st.selectbox('The type of product pitched to the customer', ['Basic', 'Deluxe', 'Standard', 'Super Deluxe', 'King'])
 NumberOfFollowups = st.slider('Total number of follow-ups by the salesperson after the sales pitch', min_value=1, max_value=10, value=3)
